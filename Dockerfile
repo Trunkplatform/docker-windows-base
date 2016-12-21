@@ -1,4 +1,4 @@
-FROM microsoft/windowsservercore
+FROM microsoft/dotnet-framework:3.5
 
 ENV chocolateyUseWindowsCompression false
 
@@ -7,6 +7,5 @@ RUN @powershell -NoProfile -ExecutionPolicy unrestricted -Command "(iex ((new-ob
 RUN choco install microsoft-build-tools -y --allow-empty-checksums \
     && choco install nuget.commandline --allow-empty-checksums -y 
 RUN choco install netfx-4.5.2-devpack --allow-empty-checksums -y
-RUN choco install visualfsharptools -y
 
 
